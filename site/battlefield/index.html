@@ -8,16 +8,34 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
+	<style>
+		#trailer {
+			height: 100vh;
+			width: 100vw;
+			background-color: black;
+		}
+
+		#trailer video {
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+		</style>
     <title>Battlefield GameStats</title>
   </head>
   <body>
     <div id="trailer">
-	    <video src="assets/videos/bf-trailer.webm"
+	    <video src="" autoplay muted loop></video>
 	    </div>
 
   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> 
+<script>
 
+	$("#trailer video")[0].src = `assets/webm/bf-${Math.floor(Math.random() * 3)}.webm`;
+	</script>
    
    
   </body>
