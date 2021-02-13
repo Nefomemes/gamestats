@@ -9,34 +9,97 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 	<style>
-		#trailer {
+		#intro {
 			height: 100vh;
 			width: 100vw;
+    
+      position: relative;
 			background-color: black;
 		}
 
-		#trailer video {
+    #title {
+			position: absolute;
+			  top: 50%;
+
+  left: 50%;
+  transform: translate(-50%, -50%);
+		
+		
+		
+			
+		}
+    body {
+       margin: 0 0 0 0;
+    }
+
+
+		#intro .background video {
 			height: 100%;
+     
 			width: 100%;
 			object-fit: cover;
+     
 			object-position: center;
 		}
+    #intro .background video html > div {
+  display: none !important;
+}
+
+    #intro .background {
+      z-index: 0;
+     position: absolute;
+     height: 100%;
+     width: 100%;
+    } 
+
+    #base-header {
+      height: 100px;
+      width: 100vw;
+      position: fixed;
+      background-color: black;
+    }
+
 		</style>
     <title>Battlefield GameStats</title>
   </head>
   <body>
-    <div id="trailer">
-	    <video src="" autoplay muted loop></video>
-	    </div>
+    <div id="base-header">
+      <p></p>
+    </div>
+    
+      <div id="intro">
 
-  
+        <div class="background">
+          <video loop autoplay muted disablePictureInPicture class="bg-video">
+          
+        <source src="bf4_heat.mp4"/>
+        </video>
+        </div>
+      
+        
+        <div id="title">
+          <p id="username">Nefomemes</p>
+            <p id="message">Hey there! I do coding and stuff.</p>
+          </div>
+      
+     
+      
+      
+        </div>
+        
+        <div id="about" class="box">
+         
+          </div>
+        </div>
+        
+      
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> 
 <script>
 
-	$("#trailer video")[0].src = `assets/webm/bf-${Math.floor(Math.random() * 3)}.webm`;
+	$("		#intro .background video source")[0].src = `/assets/webm/bf-${Math.floor(Math.random() * 3)}.webm`;
 	</script>
    
-   
+ 
   </body>
 </html>
