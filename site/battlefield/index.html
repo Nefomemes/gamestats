@@ -9,17 +9,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
 	<style>
+
+    @import url('/assets/fonts/rajdhani/font.css');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 		#intro {
 			height: 100vh;
 			width: 100vw;
     
-      position: relative;
-			background-color: black;
+      
+
 		}
 
     #title {
 			position: absolute;
 			  top: 50%;
+
 
   left: 50%;
   transform: translate(-50%, -50%);
@@ -31,55 +35,80 @@
     body {
        margin: 0 0 0 0;
     }
+    #things-container  video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
 
-
-		#intro .background video {
-			height: 100%;
-     
-			width: 100%;
-			object-fit: cover;
-     
-			object-position: center;
-		}
-    #intro .background video html > div {
-  display: none !important;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
-    #intro .background {
-      z-index: 0;
-     position: absolute;
-     height: 100%;
-     width: 100%;
-    } 
 
+#base-header, #things-container video {
+  grid-column: 1;
+  grid-row: 1;
+}
+  .battlefield-logo {
+    font-family: "Bebas Neue"
+  }
     #base-header {
-      height: 100px;
+      height: 50px;
       width: 100vw;
       position: fixed;
+      z-index: 10;
       background-color: black;
+      color: white;
+      display: flex;
+      align-items: center;
+    }
+
+    #title-header {
+      font-family: "Bebas Neue";
+      font-size: 30px;
+      height: 30px;
+      line-height: 30px;
+      display: flex;
+      margin-left: 5px;
+    }
+
+
+    #content {
+      z-index: 1;
+    }
+
+    #content {
+      color: white;
     }
 
 		</style>
     <title>Battlefield GameStats</title>
   </head>
   <body>
+    <div id="things-container">
     <div id="base-header">
-      <p></p>
+      <div id="title-header">
+      <p>Battlefield GameStats</p>
+      </div>
+
     </div>
-    
+
+    <video loop="" autoplay="" muted="" disablepictureinpicture="" class="bg-video">
+      <div><p>Ugh, seems the video is broken.</p></div>
+    <source src="/assets/webm/bf-1.webm">
+    </video>
+
+    </div>
+  </div>
+    <div id="content">
       <div id="intro">
 
-        <div class="background">
-          <video loop autoplay muted disablePictureInPicture class="bg-video">
-          
-        <source src="bf4_heat.mp4"/>
-        </video>
-        </div>
       
         
         <div id="title">
-          <p id="username">Nefomemes</p>
-            <p id="message">Hey there! I do coding and stuff.</p>
+          <p id="username">Battlefield GameStats</p>
+            <p id="message">Unofficial stats tracking tool for Battlefield games, and other Battlelog games.</p>
           </div>
       
      
@@ -91,14 +120,15 @@
          
           </div>
         </div>
-        
-      
+      </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> 
 <script>
 
-	$("		#intro .background video source")[0].src = `/assets/webm/bf-${Math.floor(Math.random() * 3)}.webm`;
-	</script>
+	$("		#things-container video source")[0].setAttribute('src', `/assets/webm/bf-${Math.floor(Math.random() * 3)}.webm`);
+  $("		#things-container video")[0].load();
+  </script>
    
  
   </body>
