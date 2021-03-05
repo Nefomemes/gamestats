@@ -65,7 +65,11 @@
     vertical-align: middle;
       justify-content: flex-start;
     }
+ .vu-logo {
+   background-image: url("https://veniceunleashed.net/assets/img/logo.svg");
+   background-size: cover;
 
+ }
     #title-header {
       font-family: "Bebas Neue";
       font-size: 30px;
@@ -112,7 +116,16 @@
     #intro .message {
       font-weight: 600;
     }
+#vu-mod-features .features-icon {
+  width: 40px !important;
+  height: 40px !important;
+  background-size: 40px 40px;
 
+}
+
+#vu-mods-features .features-content {
+  margin-left: 40px;
+}
     #about {
       background-color: rgba(0, 0, 0, 0.4);
       min-height: 100vh;
@@ -157,15 +170,16 @@ flex-wrap: wrap;
     .features-content  {
     	display: flex;
     	flex-direction: column;
-    margin-left: 5px;
+    margin-left: 10px;
     }
     
+    
+
     .features-icon {
     	display: flex;
     	align-items: center;
     	height: 35px;
-    	
-    }
+    	width: 35px;    }
     
     
     
@@ -195,13 +209,10 @@ flex-wrap: wrap;
 	    }
 
 	    #about .features {
-		    width: 25%;
+		    width: 40%;
 		    margin-right: 40px;
 	    }
-
-	    #about #forum-features {
-		    width: 30% !important;
-	    }
+      
 
     }
 
@@ -281,19 +292,17 @@ Forums, revived
         </div>
         </div>
 	
-	<div class="features">
+	<div class="features" id="vu-mod-features">
 	
-<div class="features-icon">
-	<span class="material-icons">
-web
-</span>
+<div class="features-icon vu-logo" id="vu-logo-features">
+	
 </div>
 <div class="features-content">
 <div class="features-title">
-It's runs in your browser	
+Venice Unleashed integration
 </div>
 <div class="features-text">
-	Everything is done in your browser. Less interactions with our server, more interactions with Battlelog. More privacy. 
+ Own a VU server? You can install the BLThunderstorm VU integration mod and get your server on the BLThunderstorm server browser and add crazy features like battle reports, persona emblems, and get your players keep track of their stats while playing on your server.
 	</div>
         </div>
         </div>
@@ -360,6 +369,8 @@ It's runs in your browser
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> 
 <script>
+
+(function () { var script = document.createElement('script'); script.src="//cdn.jsdelivr.net/npm/eruda"; document.body.appendChild(script); script.onload = function () { eruda.init() } })();
 
 	$("		#things-container video source")[0].setAttribute('src', `/assets/webm/bf-${Math.floor(Math.random() * 4)}.webm`);
   $("		#things-container video")[0].load();
