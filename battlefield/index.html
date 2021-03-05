@@ -119,14 +119,21 @@
       max-height: auto;
       width: 100vw;
       position: relative;
-      display: flex;
-          flex-direction: column;
-      align-items: center;
-     color: white;
-      justify-content: center;
+ 
+        padding-top: 100px;
+       color: white;
+     
+    }
+
+    #features-container {
+     display: flex;
+       flex-direction: column;
+        align-items: center;
+    justify-content: center;
+flex-wrap: wrap;
     }
     
-    
+
     #about-content {
     	margin-left: 40px;
      
@@ -142,7 +149,9 @@
     .features {
     	display: flex;
     	font-size: 25px !important;
-    	width: 50%;
+	width: calc(100% - 80px);
+	margin-bottom: 40px;
+	margin-top: 40px;
     }
     
     .features-content  {
@@ -171,7 +180,30 @@
     	width: 50px;
     	border-right: 0.001px solid;
     }
-    
+
+#main-ui {
+	height: 100vh;
+	width: 100%;
+	
+}
+    @media (orientation: landscape){
+	    #features-container {
+		    flex-direction: row;
+		    align-items: flex-start;
+		
+		    
+	    }
+
+	    #about .features {
+		    width: 25%;
+		    margin-right: 40px;
+	    }
+
+	    #about #forum-features {
+		    width: 30% !important;
+	    }
+
+    }
 
 		</style>
     <title>Battlefield GameStats</title>
@@ -216,8 +248,40 @@ menu
         </div>
         
         <div id="about" class="box">
-         
+         <div id="features-container">
 <div class="features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser, from complicated things  like displaying forums to simple things like stuff. 
+	</div>
+        </div>
+        </div>
+	<div class="features" id="forum-features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+forum
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+Forums, revived	
+</div>
+<div class="features-text">Comment, ask, or answer something on old threads that have been archived. Maybe you wanna ask about an a bug to an old thread, share things, or do stuff.
+	</div>
+        </div>
+        </div>
+	
+	<div class="features">
 	
 <div class="features-icon">
 	<span class="material-icons">
@@ -237,6 +301,22 @@ It's runs in your browser
 	
 <div class="features-icon">
 	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser, from complicated things  like displaying forums to simple things like stuff. 
+	</div>
+        </div>
+        </div>
+	<div class="features" id="forum-features">
+	
+<div class="features-icon">
+	<span class="material-icons">
 forum
 </span>
 </div>
@@ -244,11 +324,33 @@ forum
 <div class="features-title">
 Forums, revived	
 </div>
-<div class="features-text">
-	We will reopen the Battlelog forum some time after launch. You will be able to comment, ask, or answer something on the old thread that have been archived.
+<div class="features-text">Comment, ask, or answer something on old threads that have been archived. Maybe you wanna ask about an a bug to an old thread, share things, or do stuff.
 	</div>
         </div>
         </div>
+	
+	<div class="features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser. Less interactions with our server, more interactions with Battlelog. More privacy. 
+	</div>
+        </div>
+        </div>
+
+</div>
+
+<div id="main-ui">
+
+</div>
       </div>
       
 
