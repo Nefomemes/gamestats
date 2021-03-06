@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"><link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<style>
 
   
@@ -61,24 +61,25 @@
       background-color: black;
       color: white;
       display: flex;
-      align-items: center;
+      
+    vertical-align: middle;
+      justify-content: flex-start;
     }
 
     #title-header {
       font-family: "Bebas Neue";
       font-size: 30px;
-      height: 30px;
-      line-height: 30px;
-      display: flex;
-      margin-left: 5px;
+   
+     
+  line-height: 35px;
+      
+  
+    margin-left: 15px;
     }
 
 
     #content {
       z-index: 1;
-    }
-
-    #content {
       color: white;
     }
 
@@ -94,7 +95,11 @@
       position: relative;
 
     }
-
+.verticallyAlign {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
     #intro .title {
       position: absolute;
       left: 25%;
@@ -110,29 +115,123 @@
 
     #about {
       background-color: rgba(0, 0, 0, 0.4);
-      height: 100vh;
+      min-height: 100vh;
+      max-height: auto;
       width: 100vw;
       position: relative;
+ 
+        padding-top: 100px;
+       color: white;
+     
     }
+
+    #features-container {
+     display: flex;
+       flex-direction: column;
+        align-items: center;
+    justify-content: center;
+flex-wrap: wrap;
+    }
+    
+
+    #about-content {
+    	margin-left: 40px;
+     
+	}
+    
+    .features-title {
+    	font-weight: bold;
+    	display: flex;
+    	align-items: center;
+    	
+    }
+    
+    .features {
+    	display: flex;
+    	font-size: 25px !important;
+	width: calc(100% - 80px);
+	margin-bottom: 40px;
+	margin-top: 40px;
+    }
+    
+    .features-content  {
+    	display: flex;
+    	flex-direction: column;
+    margin-left: 5px;
+    }
+    
+    .features-icon {
+    	display: flex;
+    	align-items: center;
+    	height: 35px;
+    	
+    }
+    
+    
+    
+    .features-text {
+    	font-size: 20px !important;
+    }
+    
+    #menu-button {
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;
+    	width: 50px;
+    	border-right: 0.001px solid;
+    }
+
+#main-ui {
+	height: 100vh;
+	width: 100%;
+	
+}
+    @media (orientation: landscape){
+	    #features-container {
+		    flex-direction: row;
+		    align-items: flex-start;
+		
+		    
+	    }
+
+	    #about .features {
+		    width: 25%;
+		    margin-right: 40px;
+	    }
+
+	    #about #forum-features {
+		    width: 30% !important;
+	    }
+
+    }
+
 		</style>
     <title>BattlefieldStats</title>
   </head>
   <body>
     <div id="things-container">
-    <div id="base-header">
-      <div id="title-header">
-      <p>BattlefieldStats</p>
-      </div>
 
-    </div>
+    	
+    <div id="base-header">    
+   
+    <div id="menu-button">
+    	<span class="material-icons">
+menu
+</span>
+</div>
+      
+      <p id="title-header" class="verticallyAlign">Battlefield GameStats</p>
+    
+
+  </div>
 
     <video loop="" autoplay="" muted="" disablepictureinpicture="" class="bg-video">
       <div><p>Ugh, seems the video is broken.</p></div>
     <source src="/assets/webm/bf-1.webm">
     </video>
 
-    </div>
-  </div>
+   </div>
+ 
     <div id="content">
       <div id="intro">
 
@@ -144,15 +243,119 @@
           </div>
       
      
-      
+      </div>
       
         </div>
         
         <div id="about" class="box">
-         <p>Ok</p>
-          </div>
+         <div id="features-container">
+<div class="features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser, from complicated things  like displaying forums to simple things like stuff. 
+	</div>
         </div>
+        </div>
+	<div class="features" id="forum-features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+forum
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+Forums, revived	
+</div>
+<div class="features-text">Comment, ask, or answer something on old threads that have been archived. Maybe you wanna ask about an a bug to an old thread, share things, or do stuff.
+	</div>
+        </div>
+        </div>
+	
+	<div class="features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser. Less interactions with our server, more interactions with Battlelog. More privacy. 
+	</div>
+        </div>
+        </div>
+	<div class="features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser, from complicated things  like displaying forums to simple things like stuff. 
+	</div>
+        </div>
+        </div>
+	<div class="features" id="forum-features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+forum
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+Forums, revived	
+</div>
+<div class="features-text">Comment, ask, or answer something on old threads that have been archived. Maybe you wanna ask about an a bug to an old thread, share things, or do stuff.
+	</div>
+        </div>
+        </div>
+	
+	<div class="features">
+	
+<div class="features-icon">
+	<span class="material-icons">
+web
+</span>
+</div>
+<div class="features-content">
+<div class="features-title">
+It's runs in your browser	
+</div>
+<div class="features-text">
+	Everything is done in your browser. Less interactions with our server, more interactions with Battlelog. More privacy. 
+	</div>
+        </div>
+        </div>
+
+</div>
+
+<div id="main-ui">
+
+</div>
       </div>
+      
+
+      
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script> 

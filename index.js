@@ -12,13 +12,13 @@ if (!req.secure && req.get('x-forwarded-proto') !== 'https' && process.env.NODE_
 }
 
 app.use(requireHTTPS);
-app.use("/", express.static(path.join(__dirname, "site"), {
+app.use("/", express.static(path.join(__dirname), {
 	lastModified: true,
 	extensions: ["html"]
 }))
 
 app.all("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "site", "404.html"));
+	res.sendFile(path.join(__dirname,  "404.html"));
 })
 
 app.listen(process.env.PORT || 3000, () => console.log("Server is running!"))
