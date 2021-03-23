@@ -15,10 +15,16 @@ app.use(requireHTTPS);
 app.use("/", express.static(path.join(__dirname), {
 	lastModified: true,
 	extensions: ["html"]
+}));
+
+app.use("/raw", express.static(path.join(__dirname, "raw"), {
+	lastModified: true
 }))
 
+app.all("/arc-sw.js", (req, res) => res.sendFile(path.join(__dirname, "assets", "scripts", "arc-sw.js")));
+
 app.all("*", (req, res) => {
-	res.sendFile(path.join(__dirname,  "404.html"));
+	res.sendFile(path.join(__dirname,  "app.html"));
 })
 
 app.listen(process.env.PORT || 3000, () => console.log("Server is running!"))
