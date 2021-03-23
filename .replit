@@ -1,2 +1,2 @@
 language = "bash"
-run = "yarn dev"
+run = "bash replit.sh"
