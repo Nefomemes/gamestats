@@ -10,10 +10,15 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
+    "battlelog.js": "https://github.com/Nefomemes/Battlelog.js",
     "core-js": "^3.9.1",
     "express": "^4.17.1",
     "nuxt": "^2.15.3",
-    "vuetify": "^2.4.7"
+    "vue": "^2.6.12",
+    "vue-template-compiler": "^2.6.12",
+    "vuetify": "^2.4.7",
+    "vuetify-loader": "^1.7.2",
+    "webpack": "^5.28.0"
   },
   "devDependencies": {
     "@nuxtjs/vuetify": "^1.11.3"
