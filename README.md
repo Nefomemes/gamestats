@@ -1,4 +1,9 @@
-# ok
+# BLThunderstorm
+BLThunderstorm is an unofficial dashboard and stats-tracking site for Battlelog games.
+
+
+## Why the name?
+'BLThunderstorm' is just a codename. I haven't thought of a great name for this project yet.
 
 ## Build Setup
 
