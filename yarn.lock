@@ -2030,16 +2030,10 @@ base@^0.11.1:
     mixin-deep "^1.2.0"
     pascalcase "^0.1.1"
 
-"battlelog.js@https://github.com/Nefomemes/Battlelog.js":
-  version "0.2.2"
-  resolved "https://github.com/Nefomemes/Battlelog.js#669bb5ecb21fc0dafe3eb12a77829932583c10b6"
-  dependencies:
-    "@babel/runtime" "7.13.10"
-    axios "^0.21.1"
-
-"battlelog.js@https://github.com/Nefomemes/battlelog.js#dev":
-  version "0.2.2"
-  resolved "https://github.com/Nefomemes/battlelog.js#4201869adb8bb163f5c7dd66727178de70e34e85"
+battlelog.js@^0.2.4:
+  version "0.2.4"
+  resolved "https://registry.yarnpkg.com/battlelog.js/-/battlelog.js-0.2.4.tgz#e6046763e90432bfb8857372b12921c0d0b01226"
+  integrity sha512-Vymj1I0FlWoOVzdyab/aG2QRko1Kc/ToU3mvpSH40qT46rn8eMf5VCitGdRz+3cfWbKY3kLs5tmaqejHBIUTVQ==
   dependencies:
     "@babel/runtime" "7.13.10"
     axios "^0.21.1"

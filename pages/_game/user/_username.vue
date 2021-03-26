@@ -1,9 +1,12 @@
 <template>
 <div>
 
-<div v-if="user">
-<div>
-{{ user.name }}
+<div v-if="user" id="user-page">
+<div id="user-wallpaper">
+<p>
+{{ user.username }}
+</p>
+<p> {{ user.userId }} </p>
 </div>
 </div>
 
@@ -33,15 +36,15 @@ async asyncData({ params }){
 try {
 let gameclient = client.game(params.game);
 
-let user = gameclient.users.fetch(params.username);
+let user = await gameclient.users.fetch(params.username);
 
 if(user){
-this.$set(this, 'user', user);
+return { user, error: false };
 }
 
 } catch(error) {
 console.error(error);
-return { error };
+return { error, user: null };
 }
 }
 
@@ -49,8 +52,14 @@ return { error };
 </script>
 <style>
 
+#user-page {
+position: relative;
+height: 100%;
+width: 100%;
+}
 
 
+#
 #error-page h1 {
   font-size: 30px;
   font-weight: 600;
@@ -76,6 +85,13 @@ color: white !important;
 display: grid; place-items: center;
 height: 100%;
 color: white;
+}
+
+#user-wallpaper {
+width: calc(100% - 80px);
+background-color: red;
+height: 500px;
+
 }
 
 </style>

@@ -27,7 +27,7 @@ menu
 
    </div>
  
-    <div>
+    <div id="template-container">
     <Nuxt/>
     </div>
       </div>

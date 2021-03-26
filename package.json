@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.13.1",
-    "battlelog.js": "https://github.com/Nefomemes/Battlelog.js",
+    "battlelog.js": "^0.2.4",
     "core-js": "^3.9.1",
     "express": "^4.17.1",
     "nuxt": "^2.15.3",
