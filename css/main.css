@@ -1,86 +1,11 @@
 @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
-		#intro {
-			height: 100vh;
-			width: 100vw;
-    
-      
-
-		}
-
-    #title {
-			position: absolute;
-			  top: 50%;
-
-
-  left: 50%;
-  transform: translate(-50%, -50%);
 		
-		
-		
-			
-		}
     body {
        margin: 0 0 0 0;
        font-family: Arial;
     }
-    #things-container  video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-
-#base-header, #things-container video {
-  grid-column: 1;
-  grid-row: 1;
-}
-  .battlefield-logo, #title-header {
-    font-family: "Bebas Neue" !important;
-  }
-    #base-header {
-      height: 50px;
-      width: 100vw;
-      position: fixed;
-      
-      z-index: 10;
-      background-color: black;
-      color: white;
-      display: flex;
-      
-    vertical-align: middle;
-      justify-content: flex-start;
-     
-    }
-    
-    #template-container {
-    	padding-top: 50px;
-    }
-
-#title-header {
-	display: flex;
-	height: 100%;
-	align-items: center;
-	margin-left: 20px;
-	font-size: 25px;
-	
-}
-#title-header a, #title-header a:link, #title-header a:visited {
-	color: white;
-	text-decoration: none;
-
-}
-    #menu-button {
-    	display: flex;
-    	align-items: center;
-    	justify-content: center;
-    	width: 50px;
-    	border-right: 0.001px solid;
-    }
+  
 
 #main-ui {
 	height: 100vh;

@@ -37,8 +37,20 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-  	'@nuxtjs/axios'
+  	'@nuxtjs/axios',
+    '@nuxtjs/auth-next'
   ],
+  auth: {
+  strategies: {
+    github: {
+      clientId: process.env.GITHUB_CLIENT_ID,
+      clientSecret: process.env.GITHUB_CLIENT_SECRET
+    },
+
+  },
+    watchLoggedIn: true
+},
+
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {

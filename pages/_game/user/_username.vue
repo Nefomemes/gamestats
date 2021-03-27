@@ -46,7 +46,7 @@ let user = await gameclient.users.fetch(params.username);
 
 if(user){
 
-user.avatarURL = user.displayAvatarURL();
+user.avatarURL = user.displayAvatarURL({size: 2048});
 return { user, error: false };
 }
 
