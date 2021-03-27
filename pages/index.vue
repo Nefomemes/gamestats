@@ -3,117 +3,7 @@
   <div>
   
   <style>
-  #service-name {
-      font-family: "Bebas Neue" !important;
-      font-size: 100px;
-      
-      line-height: 100px;
-      margin-bottom: -1px;
-     
-    }
-
-    #intro {
-      position: relative;
-
-    }
-
-
-
-      #intro .title {
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      font-family: Arial;
-    color: white;
-      transform: translate(-50%, -50%);
-      
-    }
-    #intro .message {
-      font-weight: 600;
-    }
-
-    #about {
-      background-color: rgba(0, 0, 0, 0.4);
-      min-height: 100vh;
-      max-height: auto;
-      width: 100vw;
-      position: relative;
- 
-        padding-top: 100px;
-        padding-bottom: 100px;
-       color: white;
-     
-    }
-
-    #features-container {
-     display: flex;
-       
-        align-items: center;
-    justify-content: center;
-flex-wrap: wrap;
-    }
-    
-
-    #about-content {
-    	margin-left: 40px;
-     
-	}
-    
-    .features-title {
-    	font-weight: bold;
-    	display: flex;
-    	align-items: center;
-    	
-    }
-    
-    .features {
-    	display: flex;
-    	font-size: 25px !important;
-	width: calc(100% - 80px);
-	margin-bottom: 40px;
-	margin-top: 40px;
-    }
-    
-    .features-content  {
-    	display: flex;
-    	flex-direction: column;
-    margin-left: 5px;
-    }
-    
-    .features-icon {
-    	display: flex;
-    	align-items: center;
-    	height: 35px;
-    	
-    }
-    
-    
-    
-    .features-text {
-    	font-size: 20px !important;
-    }
-
-     @media (orientation: landscape){
-	 
-	 
-	    #forums-container {
-		    flex-direction: row;
-		    align-items: flex-start;
-		
-		    
-	    }
-
-	    #about .features {
-		    width: 25%;
-		    margin-right: 40px;
-	    }
-
-	    #about #forum-features {
-		    width: 30% !important;
-	    }
-
-    }
-
+  
   </style>
   
   <div></div>
@@ -249,4 +139,116 @@ export default {
   }
 }
 </script>
-m
+<style>
+
+#service-name {
+      font-family: "Bebas Neue" !important;
+      font-size: 100px;
+      
+      line-height: 100px;
+      margin-bottom: -1px;
+     
+    }
+
+    #intro {
+      position: relative;
+
+    }
+
+
+
+      #intro .title {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      font-family: Arial;
+    color: white;
+      transform: translate(-50%, -50%);
+      
+    }
+    #intro .message {
+      font-weight: 600;
+    }
+
+    #about {
+      background-color: rgba(0, 0, 0, 0.4);
+      min-height: 100vh;
+      max-height: auto;
+      width: 100vw;
+      position: relative;
+ 
+        padding-top: 100px;
+        padding-bottom: 100px;
+       color: white;
+     
+    }
+
+    #features-container {
+     display: flex;
+       
+        align-items: center;
+    justify-content: center;
+flex-wrap: wrap;
+    }
+    
+
+    #about-content {
+    	margin-left: 40px;
+     
+	}
+    
+    .features-title {
+    	font-weight: bold;
+    	display: flex;
+    	align-items: center;
+    	
+    }
+    
+    .features {
+    	display: flex;
+    	font-size: 25px !important;
+	width: calc(100% - 80px);
+	margin-bottom: 40px;
+	margin-top: 40px;
+    }
+    
+    .features-content  {
+    	display: flex;
+    	flex-direction: column;
+    margin-left: 5px;
+    }
+    
+    .features-icon {
+    	display: flex;
+    	align-items: center;
+    	height: 35px;
+    	
+    }
+    
+    
+    
+    .features-text {
+    	font-size: 20px !important;
+    }
+
+     @media (orientation: landscape){
+	 
+	 
+	    #forums-container {
+		    flex-direction: row;
+		    align-items: flex-start;
+		
+		    
+	    }
+
+	    #about .features {
+		    width: 25%;
+		    margin-right: 40px;
+	    }
+
+	    #about #forum-features {
+		    width: 30% !important;
+	    }
+
+}
+</style>

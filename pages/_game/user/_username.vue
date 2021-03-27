@@ -1,15 +1,21 @@
 <template>
 <div>
 
-<div v-if="user" id="user-page">
-<div id="user-wallpaper">
-<p>
+<div v-if="user" id="user-page-container">
+<div id="user-page">
+<div id="main-user-wallpaper">
+<div id="main-user-wallpaper-content">
+<div id="main-user-username-box">
+<p class="user-name">
 {{ user.username }}
 </p>
-<p> {{ user.userId }} </p>
+<p class="user-id"> {{ user.userId }} </p>
+</div>
+<img v-bind:src="user.avatarURL" id="main-user-avatar-box">
 </div>
 </div>
-
+</div>
+</div>
 <div v-if="error" id="error-page" >
 <div id="box-error">
 <h1>
@@ -25,7 +31,7 @@
 </div>
 </template>
 <script>
-import bljs from 'battlelog.js';
+import bljs from 'battlelog.js/dist/bundle.dev.js';
 
 var client = bljs();
 
@@ -39,6 +45,8 @@ let gameclient = client.game(params.game);
 let user = await gameclient.users.fetch(params.username);
 
 if(user){
+
+user.avatarURL = user.displayAvatarURL();
 return { user, error: false };
 }
 
@@ -46,20 +54,28 @@ return { user, error: false };
 console.error(error);
 return { error, user: null };
 }
+},
+
+head() {
+  return {
+  title: this.user.username || "User not found",
+  }
 }
 
 }
 </script>
 <style>
 
-#user-page {
-position: relative;
+#user-page-container {
 height: 100%;
 width: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
 }
 
 
-#
+
 #error-page h1 {
   font-size: 30px;
   font-weight: 600;
@@ -87,11 +103,38 @@ height: 100%;
 color: white;
 }
 
-#user-wallpaper {
-width: calc(100% - 80px);
-background-color: red;
-height: 500px;
-
+#user-page {
+width: calc(100% - 40px);
+margin-top: 20px;
+position: relative;
 }
 
+#main-user-wallpaper {
+background-color: black;
+color: white;
+width: 100%;
+position: relative;
+height: 150px;
+border-radius: 10px;
+}
+
+#main-user-wallpaper-content {
+padding: 20px;
+height: 100%;
+width: 100%;
+display: flex;
+justify-content: space-between;
+}
+
+#main-user-username-box {
+display: flex;
+flex-direction: column;
+justify-content: flex-end;
+}
+
+
+ .user-name {
+ font-weight: 600;
+ font-size: 35px;
+ }
 </style>
