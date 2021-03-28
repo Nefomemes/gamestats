@@ -3,7 +3,7 @@
 
 <div v-if="user" id="user-page-container">
 <div id="user-page">
-<div id="main-user-wallpaper">
+<div id="main-user-wallpaper" class="user-page-content">
 <div id="main-user-wallpaper-content">
 <div id="main-user-username-box">
 <p class="user-name">
@@ -13,6 +13,10 @@
 </div>
 <img v-bind:src="user.avatarURL" id="main-user-avatar-box">
 </div>
+</div>
+
+<div id="user-presentation" class="user-page-content">
+<LazyMarkdownBox v-if="user.readme" v-bind:content="user.readme"/>
 </div>
 </div>
 </div>
@@ -36,7 +40,9 @@ import bljs from 'battlelog.js/dist/bundle.dev.js';
 var client = bljs();
 
 export default {
-
+data() {
+return {user: undefined, error: undefined, readme: undefined}
+},
 async asyncData({ params }){
 
 try {
@@ -47,7 +53,12 @@ let user = await gameclient.users.fetch(params.username);
 if(user){
 
 user.avatarURL = user.displayAvatarURL({size: 2048});
-return { user, error: false };
+
+user.readme = user.userinfo.presentation;
+
+
+
+return { user, error: false};
 }
 
 } catch(error) {
@@ -136,5 +147,9 @@ justify-content: flex-end;
  .user-name {
  font-weight: 600;
  font-size: 35px;
+ }
+ 
+ .user-page-content {
+ margin-bottom: 20px;
  }
 </style>

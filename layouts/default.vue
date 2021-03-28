@@ -25,7 +25,9 @@ menu
     </div>
 <div id="right-side-base-header">
 <SignInButton/>
+
 </div>
+<SignedInNavigation/>
   </div>
 
     <video loop="" autoplay="" muted="" disablepictureinpicture="" class="bg-video">
@@ -132,7 +134,7 @@ export default {
     }
     
     #template-container {
-    	padding-top: 50px;
+    	padding-top: 75px;
     }
 
 #title-header {
