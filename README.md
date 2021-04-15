@@ -1,3 +1,7 @@
+| Archived |
+| -- |
+| This repo have been archived in favor of a monorepo that can be found [here](https://github.com/Nefomemes/BLThunderstorm) |
+
 # BLThunderstorm
 [![Run this repo on Replit](https://replit.com/badge/github/Nefomemes/BLThunderstorm)](https://replit.com/github/Nefomemes/BLThunderstorm)
 <br/>
